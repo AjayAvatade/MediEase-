@@ -34,9 +34,10 @@ function NotFound() {
         </div>
       </div>
     </div>
+    </div>
   );
 };
-</div>
+
 
     const styles = {
   container: {
@@ -243,7 +244,5 @@ styleSheet.textContent = `
   }
 `;
 
-  )
-}
 
 export default NotFound
