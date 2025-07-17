@@ -4,7 +4,28 @@ import React from 'react'
 
 function Login() {
   return (
-    <div>Login</div>
+    <div>
+    <div class="login-box">
+        <h2>LOGIN</h2>
+        <form action="index2.html">
+            <div class="form-login">
+                <label for="username">Email or Username</label>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div class="form-login">
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" required />
+            </div>
+            <button type="submit" class="login-button">Log In</button>
+            <div id="forgot-password">
+               <Link to="/reset-password">Forgot Password?</Link>
+            </div>
+            <div id="forgot-password1">
+                Didn't have an account<Link to="/register">Register</Link>
+            </div>
+        </form>
+    </div>
+    </div>
   )
 }
 
