@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #2c3e50;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ffffff, #636bfa);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 20px rgba(78, 84, 200, 0.3);
+  z-index: 1000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo styling with emoji */
+.logo {
+  height: 55px;
+  display: flex;
+}
+
+.logo::before {
+  font-size: 2rem;
+}
+
+/* Login button */
+.login-btn {
+  background: #00b7ff;
+  color: #000000;
+  font-family: serif;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 214, 0, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.login-btn:hover {
+  background: #ffc400;
+  box-shadow: 0 8px 16px rgba(255, 214, 0, 0.6);
+  transform: translateY(-3px);
+}
+
+.login-btn a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hero section */
+.hero {
+  margin-top: 80px; /* space under fixed header */
+  background: #ffffff;
+  padding: 4rem 2rem;
+  min-height: 90vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.hero-content-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+  background: linear-gradient(90deg, #0b13b9, #8f94fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  color: #7f8c8d;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Hero CTA buttons */
+.hero-cta {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  user-select: none;
+  border: 2px solid transparent;
+}
+
+/* Primary button */
+.primary-btn {
+  background: linear-gradient(90deg, #0f19dd, #8f94fb);
   color: white;
+  border: none;
+  box-shadow: 0 8px 15px rgba(142, 148, 251, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.primary-btn:hover {
+  box-shadow: 0 15px 25px rgba(142, 148, 251, 0.7);
+  transform: translateY(-3px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Secondary button */
+.secondary-btn {
+  background: transparent;
+  color: #4e54c8;
+  border: 2px solid #4e54c8;
+}
+
+.secondary-btn:hover {
+  background: #4e54c8;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Hero image */
+.hero-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(78, 84, 200, 0.2);
+  max-height: 500px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-content-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-image {
+    max-height: 350px;
+    margin-top: 2rem;
+  }
+
+  .login-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
