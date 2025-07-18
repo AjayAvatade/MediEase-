@@ -2,10 +2,23 @@
 
 
 import React from 'react'
+import { Link } from 'react-router-dom'
+import image from '../MediEase1.jpg'
+import logo from '../MediEase logo 3.png'
 
 function Home() {
   return (
-    <div><section className="hero">
+    <div>
+        <div className="navbar-container"> 
+         <header>
+          <div className="header-container">  
+            <div className="logo"><img src={logo}/></div>
+        
+              <button className="login-btn" id="login-btn">
+              <Link to='/login'><i className="fa-solid fa-user"></i> Login</Link></button>
+          </div>
+         </header>
+        <section className="hero">
         <div className="hero-content-wrapper">
             <div className="hero-text">
                 <h1>Revolutionize Your <span>Pharmacy</span></h1>
@@ -23,6 +36,7 @@ function Home() {
         </div> 
     </section>
     </div>
+</div>
   )
 }
 
