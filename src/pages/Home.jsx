@@ -3,8 +3,8 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import image from '../MediEase1.jpg'
-import logo from '../MediEase logo 3.png'
+import image from './MediEase1.jpg'
+import logo from './MediEase logo 3.png'
 
 function Home() {
   return (
