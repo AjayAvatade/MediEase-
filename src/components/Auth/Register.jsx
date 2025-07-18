@@ -6,7 +6,7 @@ import React from 'react'
 function Register() {
   return (
     <div>
-    <div className="login-box">
+  <div className="login-box">
         <h2>REGISTER</h2>
         <form action="/login">
           <div className="form-login">
