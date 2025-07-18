@@ -203,3 +203,142 @@ header {
     font-size: 0.9rem;
   }
 }
+
+
+/* LOGIN CSS */
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling: center content */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #6dc8d6, #0096c7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #004d40;
+}
+
+/* Login Box Container */
+.login-box {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 128, 128, 0.25);
+  width: 380px;
+  text-align: center;
+  border: 2px solid #00bcd4;
+  position: relative;
+}
+
+/* Medical cross icon top-left */
+.login-box::before {
+  content: "\271A"; /* Unicode medical cross */
+  font-size: 40px;
+  color: #00796b;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading inside login box */
+.login-box h2 {
+  margin-bottom: 30px;
+  color: #00796b;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+/* Input group */
+.form-login {
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #004d40;
+}
+
+/* Labels */
+.form-login label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* Inputs */
+.form-login input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #4db6ac;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-weight: 500;
+  color: #004d40;
+  background-color: #e0f2f1;
+}
+
+.form-login input::placeholder {
+  color: #00796b99;
+}
+
+.form-login input:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 8px #00796b99;
+  outline: none;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background-color: #00796b;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px #004d40aa;
+}
+
+.login-button:hover {
+  background-color: #004d40;
+  box-shadow: 0 7px 20px #00332fcc;
+}
+
+/* Forgot Password and Register links */
+#forgot-password,
+#forgot-password1 {
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #004d40;
+}
+
+#forgot-password a,
+#forgot-password1 a {
+  color: #00796b;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+#forgot-password a:hover,
+#forgot-password1 a:hover {
+  font-weight: 700;
+  color: #004d40;
+  text-decoration: none;
+}
