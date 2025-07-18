@@ -8,6 +8,7 @@ import SupplierDashboard from './components/Dashboard/SupplierDashboard';
 import ChemistDashboard from './components/Dashboard/ChemistDashboard';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import './App.css';
 
 function App() {
   return (
