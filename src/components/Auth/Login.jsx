@@ -5,9 +5,9 @@ import React from 'react'
 function Login() {
   return (
     <div>
-    <div class="login-box">
+   <div class="login-box">
         <h2>LOGIN</h2>
-        <form action="index2.html">
+        <form action="">
             <div class="form-login">
                 <label for="username">Email or Username</label>
                 <input type="text" id="username" name="username" required />
@@ -16,7 +16,7 @@ function Login() {
                 <label for="password">Password</label>
                 <input type="text" id="password" name="password" required />
             </div>
-            <button type="submit" class="login-button">Log In</button>
+            <button type="submit" class="login-button" to="/dashboard/supplier">Log In</button>
             <div id="forgot-password">
                <Link to="/reset-password">Forgot Password?</Link>
             </div>
